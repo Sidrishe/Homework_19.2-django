@@ -1,0 +1,119 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skystore</title>
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .linkButton {
+        border: 0;
+    border-radius: 5px;
+    background: #4676D7;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+        }
+
+    .central {
+    text-align:  center;
+    }
+
+    .box {
+    background: #8801ef;
+    color: #fff;
+    width: 300px;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .tovar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    }
+
+    .linia {
+    border-bottom: 2px solid #8801ef;
+    padding: 0 2em;
+    }
+
+    .root {
+    height: 100vh;
+    }
+
+    .nizina {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 200px;
+
+    }
+
+    </style>
+</head>
+<body>
+<div class="root">
+<!--    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">-->
+     <div >
+
+        <nav class="ms-5">
+            <a href="/">
+                <button class="linkButton">Каталог</button>
+            </a>
+            <a href="/contacts/">
+                <button class="linkButton">Контакты</button>
+            </a>
+
+        </nav>
+        <div class="linia"/>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <div class="nizina">
+
+        <div>
+            <h5>Категории</h5>
+            <ul>
+                <li><a href="#">Рассылки</a></li>
+                <li><a href="#">Телеграм боты</a></li>
+                <li><a href="#">Полезные утилиты</a></li>
+                <li><a href="#">Веб-приложения</a></li>
+                <li><a href="#">Микросервисы</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h5>Дополнительно</h5>
+            <ul>
+                <li><a href="#">Мы пишем</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h5>О нас</h5>
+            <ul>
+                <li><a href="/contacts/">Контакты</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <p class="central">
+        SkyStore &copy; 2023
+    </p>
+</div>
+
+
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
