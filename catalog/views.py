@@ -19,13 +19,13 @@ def home(request):
     return render(request, 'catalog/home.html', context)
 
 
-def products(request, pk):
-    category_name = Product.objects.get(pk=pk)
-    context = {
-        'object_list': Product.objects.filter(category=pk),
-        'title': f'Каталог товаров - {category_name.name}'
-    }
-    return render(request, 'catalog/products.html', context)
+# def products(request, pk):
+#     category_name = Product.objects.get(pk=pk)
+#     context = {
+#         'object_list': Product.objects.filter(category=pk),
+#         'title': f'Каталог товаров - {category_name.name}'
+#     }
+#     return render(request, 'catalog/products.html', context)
 
 
 def contacts(request):
