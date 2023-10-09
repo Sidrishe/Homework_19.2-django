@@ -13,8 +13,18 @@
                 <li class="central">{{ object.description }}</li>
                 <li class="central">{{ object.created_at }}</li>
                 <li class="central">{{ object.updated_at }}</li>
+                {% if object.is_active %}
+                <li><b>Номер версии:</b> {{ object.version_number}}</li>
+                <li><b>Имя версии:</b> {{ object.version_name}}</li>
+                {% endif %}
             </ul>
-
+        </div>
+        <div class="card-footer">
+            <div class="btn-group">
+                <a href="{% url 'catalog:product_update' object.pk %}" type="button"
+                   class="btn btn-sm btn-outline-secondary">Редактировать</a>
+                <a href="{% url 'catalog:product_delete' object.pk %}" type="button"
+                   class="btn btn-sm btn-outline-danger">Удалить</a>
+            </div>
         </div>
     </div>
-</div>
